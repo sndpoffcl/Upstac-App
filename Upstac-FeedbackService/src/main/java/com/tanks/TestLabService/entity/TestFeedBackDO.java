@@ -28,4 +28,5 @@ public class TestFeedBackDO {
     private String testFeedBack;
     private String testResult;
     private String status;
+    private boolean medicineReq;
 }

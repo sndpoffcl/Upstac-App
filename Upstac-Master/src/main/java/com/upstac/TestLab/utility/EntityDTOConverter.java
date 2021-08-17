@@ -46,6 +46,7 @@ public class EntityDTOConverter {
         booking.setTestResult(bookingDO.getTrackingNo());
         booking.setTrackingNo(bookingDO.getTrackingNo());
         booking.setId(bookingDO.getId());
+        booking.setMedicineReq(bookingDO.isMedicineReq());
         return booking;
 
     }

@@ -56,6 +56,7 @@ public class DTOEntityConverter {
         bookingDO.setFeedBack(booking.getFeedBack());
         bookingDO.setTestResult(booking.getTestResult());
         bookingDO.setTrackingNo(booking.getTrackingNo());
+        bookingDO.setMedicineReq(booking.isMedicineReq());
 
         return bookingDO;
     }
@@ -66,6 +67,7 @@ public class DTOEntityConverter {
         bookingDO.setFeedBack(testBooking.getTestFeedBack());
         bookingDO.setTestResult(testBooking.getTestResult());
         bookingDO.setTrackingNo(testBooking.getTrackingNo());
+        bookingDO.setMedicineReq(testBooking.isMedicineReq());
         return bookingDO;
     }
 

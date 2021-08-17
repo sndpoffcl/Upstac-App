@@ -59,6 +59,7 @@ public class TestResultController {
         test.setBookingNo(updatedTestResultDO.getBookingNo());
         test.setStatus(updatedTestResultDO.getStatus());
         test.setTestCode(updatedTestResultDO.getTestCode());
+        test.setMedicineReq(updatedTestResultDO.isMedicineReq());
 
         messageProducer.send(test);
         return ResponseEntity.ok(updatedTestResultDO);

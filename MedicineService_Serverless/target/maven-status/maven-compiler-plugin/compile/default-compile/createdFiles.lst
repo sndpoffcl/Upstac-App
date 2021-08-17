@@ -1,0 +1,5 @@
+com/upstac/medicineService/controller/MedicineController.class
+com/upstac/medicineService/Application.class
+com/upstac/medicineService/repository/MedicineRepo.class
+com/upstac/medicineService/controller/PingController.class
+com/upstac/medicineService/StreamLambdaHandler.class

@@ -7,7 +7,10 @@ import com.tanks.TestLabService.repository.TestFeedBackRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,6 +22,9 @@ public class TestFeedBackServiceImpl implements TestFeedBackService {
 
     @Autowired
     TestFeedBackRepository testFeedBackRepository;
+
+    @Value("${medicineService.url}")
+    private String medicineServiceURL;
 
     @Override
     public TestFeedBackDO addTestFeedBack(TestFeedBackDO testFeedBackDO) throws TestFeedBackAlreadyExistsException {
@@ -40,6 +46,15 @@ public class TestFeedBackServiceImpl implements TestFeedBackService {
             TestFeedBackDO existingTestResult = savedTestResult.get();
             existingTestResult.setTestFeedBack(testFeedBackDO.getTestFeedBack());
             existingTestResult.setStatus(testFeedBackDO.getStatus());
+
+            if(existingTestResult.isMedicineReq()){
+                RestTemplate restTemplate = new RestTemplate();
+                String medicineServiceReq = medicineServiceURL + testFeedBackDO.getTestFeedBack().substring(0,6);
+                ResponseEntity<String> response
+                        = restTemplate.getForEntity(medicineServiceReq, String.class);
+                existingTestResult.setTestFeedBack(testFeedBackDO.getTestFeedBack() + " - Meds: " + response.getBody());
+            }
+
             return testFeedBackRepository.save(existingTestResult);
         }
     }

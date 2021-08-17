@@ -16,4 +16,5 @@ public class TestBooking {
     private String status;
     private String testCode;
     private String testFeedBack;
+    private boolean medicineReq;
 }

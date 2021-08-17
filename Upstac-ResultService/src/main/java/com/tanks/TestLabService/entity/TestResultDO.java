@@ -28,4 +28,5 @@ public class TestResultDO{
     private String testResult;
     private String status;
     private String testCode;
+    private boolean medicineReq;
 }

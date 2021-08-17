@@ -28,6 +28,7 @@ public class BookingDO extends BaseDO{
     private String testResult;
     private String feedBack;
     private String status;
+    private boolean medicineReq;
 
     @ManyToOne
     @JsonBackReference("user_booking")

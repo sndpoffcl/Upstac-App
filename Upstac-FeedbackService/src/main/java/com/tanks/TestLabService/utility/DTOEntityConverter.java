@@ -13,6 +13,7 @@ public class DTOEntityConverter {
         testFeedBackDO.setBookingNo(testBooking.getBookingNo());
         testFeedBackDO.setTrackingNo(testBooking.getTrackingNo());
         testFeedBackDO.setTestResult(testBooking.getTestResult());
+        testFeedBackDO.setMedicineReq(testBooking.isMedicineReq());
         return testFeedBackDO;
     }
 

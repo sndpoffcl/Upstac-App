@@ -23,7 +23,6 @@ public class BookingController {
 
     private final int SHORT_ID_LENGTH = 10;
 
-
     @Autowired
     BookingService bookingService;
 
@@ -41,7 +40,7 @@ public class BookingController {
 
 
     @GetMapping("/booking/{id}")
-    public ResponseEntity getBookingDetails(@PathVariable("id") int id){
+    public ResponseEntity getBookingDetails(@PathVariable("id") int id) {
         logger.info("getBookingDetails : start", id);
         BookingDO savedBookingDO = bookingService.getBookingDetails(id);
         return ResponseEntity.ok(entityDTOConverter.convertBookingDOToBooking(savedBookingDO));
@@ -61,6 +60,7 @@ public class BookingController {
         newTestBooking.setStatus(savedBookingDO.getStatus());
         newTestBooking.setTestCode(savedBookingDO.getTestDO().getTestCode());
         newTestBooking.setTrackingNo(savedBookingDO.getTrackingNo());
+        newTestBooking.setMedicineReq(savedBookingDO.isMedicineReq());
         messageProducer.send(newTestBooking);
 
         return ResponseEntity.ok(entityDTOConverter.convertBookingDOToBooking(savedBookingDO));

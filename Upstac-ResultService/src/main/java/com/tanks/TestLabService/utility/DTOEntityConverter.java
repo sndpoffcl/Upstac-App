@@ -13,6 +13,7 @@ public class DTOEntityConverter {
         testResultDO.setBookingNo(testBooking.getBookingNo());
         testResultDO.setTrackingNo(testBooking.getTrackingNo());
         testResultDO.setTestCode(testBooking.getTestCode());
+        testResultDO.setMedicineReq(testBooking.isMedicineReq());
         return testResultDO;
     }
 

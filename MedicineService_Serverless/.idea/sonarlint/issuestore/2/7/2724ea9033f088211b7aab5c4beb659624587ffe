@@ -1,0 +1,14 @@
+
+x
+java:S1104
+"]Make medicineInventory a static final constant or non-public and provide accessors if needed.(Ότ†Ώώÿÿÿÿ
+”
+java:S1319
+"yThe type of the "medicineInventory" object should be an interface such as "Map" rather than the implementation "HashMap".(Ότ†Ώώÿÿÿÿ
+8
+java:S2386
+"Make this member "protected".(Ότ†Ώώÿÿÿÿ
+R
+java:S1444
+"7Make this "public static medicineInventory" field final(Ότ†Ώώÿÿÿÿ
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(χύ…C8‹φ–µ/

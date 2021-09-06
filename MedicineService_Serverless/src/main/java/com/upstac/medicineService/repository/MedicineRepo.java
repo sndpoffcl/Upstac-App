@@ -9,11 +9,13 @@ public class MedicineRepo {
 
     public static HashMap<String, String> medicineInventory = new HashMap<>();
 
+    private static final String  NOT_AVAILABLE = "NOT_AVAILABLE";
+
     public String getMedicine(String code){
         if(medicineInventory.containsKey(code)){
             return medicineInventory.get(code);
         }else{
-            return "NOT AVAILABLE";
+            return NOT_AVAILABLE;
         }
     }
 

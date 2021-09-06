@@ -1,0 +1,411 @@
+{
+	"info": {
+		"_postman_id": "76515615-2edf-4a68-81c6-fc8fc2b309fe",
+		"name": "Upstac",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Ram Kumar\",\n    \"gender\" : \"Male\",\n    \"address\" : \"Road A, City B, State C\",\n    \"phoneNumber\" : \"1234567890\",\n    \"emailId\" : \"ram@email.com\",\n    \"password\" : \"password\",\n    \"active\" : true,\n    \"roles\" : \"customer,admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test_master/v1/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test_master",
+						"v1",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"emailId\" : \"abc1@email.com\",\n    \"password\" : \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test_master/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test_master",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllTest",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDc4MzY1MiwiaWF0IjoxNjI0NzQ3NjUyfQ.XCeBc_IHrDxh0vNrl3fZfo5sn4wDTQtpS5J1pzCXYb8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test_master/v1/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test_master",
+						"v1",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllBooking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDc4MzY1MiwiaWF0IjoxNjI0NzQ3NjUyfQ.XCeBc_IHrDxh0vNrl3fZfo5sn4wDTQtpS5J1pzCXYb8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test_master/v1/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test_master",
+						"v1",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTestDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDc4MzY1MiwiaWF0IjoxNjI0NzQ3NjUyfQ.XCeBc_IHrDxh0vNrl3fZfo5sn4wDTQtpS5J1pzCXYb8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test_master/v1/test/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test_master",
+						"v1",
+						"test",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddTestDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDc4MzY1MiwiaWF0IjoxNjI0NzQ3NjUyfQ.XCeBc_IHrDxh0vNrl3fZfo5sn4wDTQtpS5J1pzCXYb8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Total Blood Count Test 2\",\n    \"price\": 500,\n    \"imageURL\": \"NA\",\n    \"testCode\": \"TBC02\",\n    \"description\": \"Computes total blood count, empty stomach\",\n    \"available\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test_master/v1/test/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test_master",
+						"v1",
+						"test",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddBooking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDgzOTk0NywiaWF0IjoxNjI0ODAzOTQ3fQ.Wozr8i61lXjkB8DzRpog3hmvVrvy6cobLVVio4Q-G68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"testCode\": \"TBC01\",\n    \"testName\": 500,\n    \"customerId\": 1,\n    \"testId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/test_master/v1/booking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test_master",
+						"v1",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestLab - GetAllTestBooking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDc4NDMwMSwiaWF0IjoxNjI0NzQ4MzAxfQ.dhGgYx2IT5N1kQZqC7e-FykcCM_9OfPTtGb40MxyUEE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"testCode\": \"TBC01\",\n    \"testName\": 500,\n    \"customerId\": 1,\n    \"testId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/test_lab/v1/testBooking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"test_lab",
+						"v1",
+						"testBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestLab - AddTestResult",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDc4NDMwMSwiaWF0IjoxNjI0NzQ4MzAxfQ.dhGgYx2IT5N1kQZqC7e-FykcCM_9OfPTtGb40MxyUEE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 1,\n    \"trackingNo\" : \"1677374546\",\n    \"testResult\" : \"High Blood Sugar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/test_lab/v1/testBooking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"test_lab",
+						"v1",
+						"testBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FeedbackService - AddTestFeedBack",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDc4NDMwMSwiaWF0IjoxNjI0NzQ4MzAxfQ.dhGgYx2IT5N1kQZqC7e-FykcCM_9OfPTtGb40MxyUEE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"trackingNo\" : \"9507638390\",\n    \"testFeedback\" : \"Stop taking sugar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/test_feedback/v1/testBookingFeedback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"test_feedback",
+						"v1",
+						"testBookingFeedback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FeedbackService - GetTestBooking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmMxQGVtYWlsLmNvbSIsImV4cCI6MTYyNDc4NDMwMSwiaWF0IjoxNjI0NzQ4MzAxfQ.dhGgYx2IT5N1kQZqC7e-FykcCM_9OfPTtGb40MxyUEE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"testCode\": \"TBC01\",\n    \"testName\": 500,\n    \"customerId\": 1,\n    \"testId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/test_lab/v1/testBooking/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"test_lab",
+						"v1",
+						"testBooking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

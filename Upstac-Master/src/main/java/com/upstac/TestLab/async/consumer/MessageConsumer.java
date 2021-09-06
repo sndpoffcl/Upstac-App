@@ -1,4 +1,4 @@
-package com.upstac.TestLab.async.producer.consumer;
+package com.upstac.TestLab.async.consumer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.upstac.TestLab.entity.BookingDO;
@@ -6,6 +6,7 @@ import com.upstac.TestLab.model.TestBooking;
 import com.upstac.TestLab.service.BookingService;
 import com.upstac.TestLab.utility.DTOEntityConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,9 @@ import java.io.IOException;
 
 @Service
 public class MessageConsumer {
+
+    @Value("${kafka.consumer.topic}")
+    private String consumerTopic;
 
     @Autowired
     DTOEntityConverter dtoEntityConverter;

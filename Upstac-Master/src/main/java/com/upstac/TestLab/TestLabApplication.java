@@ -1,7 +1,6 @@
 package com.upstac.TestLab;
 
 import com.upstac.TestLab.async.producer.MessageProducer;
-import com.upstac.TestLab.model.TestBooking;
 import com.upstac.TestLab.service.TestService;
 import com.upstac.TestLab.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

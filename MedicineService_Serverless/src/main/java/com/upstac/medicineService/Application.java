@@ -11,8 +11,6 @@ import javax.annotation.PostConstruct;
 
 
 @SpringBootApplication
-// We use direct @Import instead of @ComponentScan to speed up cold starts
-// @ComponentScan(basePackages = "com.upstac.controller")
 @Import({ PingController.class })
 public class Application {
 
